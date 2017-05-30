@@ -36,7 +36,6 @@ class Yelp():
 			db_name = input('Enter Database Name: ')
 		output_name = db_name.split('.')[0]
 		self.conn = sqlite3.connect(db_name)
-		print(sqlite3.sqlite_version)
 		self.conn.execute('pragma foreign_keys=ON')
 		self.conn.commit()
 
